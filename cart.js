@@ -23,5 +23,19 @@ window.onload = function() {
     bookingSubtotal.innerHTML = `Rp. ${subtotal.toLocaleString()}`;
     total.innerHTML = `Rp. ${subtotal.toLocaleString()}`;
     
-    // If needed, append cartHtml to a specific table body in your cart
+    // Clear cart function
+    const clearCart = document.getElementById('clear-cart'); // Assuming you have a button with id 'clear-cart'
+    clearCart.onclick = function() {
+        localStorage.removeItem('cart'); // Clear local storage
+        cart = []; // Reset cart array
+        subtotal = 0; // Reset subtotal
+
+        // Update HTML to reflect empty cart
+        bookingSubtotal.innerHTML = 'Rp. 0';
+        total.innerHTML = 'Rp. 0';
+        
+        // Clear cart table (if needed)
+        cartHtml = '';
+        // Append cartHtml to the cart table body if needed
+    };
 };

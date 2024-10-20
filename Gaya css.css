@@ -63,6 +63,29 @@ button.white{
     transition: 0.2s;
 }
 
+.book-now-button {
+    background-color: #F0ECE2;
+    color: #1a1a1a; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.book-now-button:hover {
+    background-color: crimson;
+    color: #F0ECE2; 
+}
+
+.book-now {
+    display: flex;
+    justify-content: right;
+}
+
 body {
     width: 100%;
 }
@@ -165,15 +188,20 @@ body {
 }
 
 #hero button {
-    background-image: url(Image/button.jpeg);
-    background-color: transparent;
-    color: crimson;
+    background-color: #e8f6ea;
+    color: #1a1a1a;
     border: 0;
     padding: 14px 80px 14px 65px;
     background-repeat: no-repeat;
     cursor: pointer;
     font-weight: 700;
     font-size: 15px;
+    border-radius: 5px
+}
+
+#hero button:hover{
+    background: crimson;
+    color: #F0ECE2;
 }
 
 #feature{
@@ -773,6 +801,11 @@ line-height: 20px;
 #contact-details .details li p{
     margin: 0;
     font-size: 14px;
+}
+
+.custom-link {
+    color: inherit; /* Use parent color */
+    text-decoration: underline; /* Underline the text */
 }
 
 #contact-details .map{

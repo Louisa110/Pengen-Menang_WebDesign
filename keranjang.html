@@ -20,10 +20,10 @@
         <div>
             <ul id="navbar">
                 <li><a href="Homepage.html">Home</a></li>
-                <li><a href="catalog page 1 guy.html">Catalog</a></li>
+                <li><a href="catalog page 1 guy.html">Our Musician</a></li>
                 <li><a href="About.html">About</a></li>
                 <li><a href="Contact.html">Contact</a></li>
-                <li id="lg-bag"><a class="active" href="keranjang.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li id="lg-bag"><a class="active" href="keranjang.html">Booking</a></li>
                 <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
             </ul>
         </div>
@@ -38,8 +38,8 @@
         <div id="coupon">
             <h3>Apply Coupon</h3>
             <div>
-                <input type="text" placeholder="Enter Your Coupon">
-                <button class="normal">Apply</button>
+                <input type="text" id="inputText" placeholder="Enter Your Coupon">
+                <button class="normal" id="applyButton">Apply</button>
             </div>
         </div>
 
@@ -57,22 +57,37 @@
                 <td><strong>Total</strong></td>
                 <td><strong id="total">Rp. 0</strong></td>
             </table>
-            <button class="normal">Proceed to Pay</button>
+            <button class="normal" id="proceedToPayButton">Proceed to Pay</button>
+            <button class="normal" id="clear-cart">Clear Cart</button>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div id="paymentModal" style="display:none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); z-index: 1000;">
+        <div style="background: white; margin: 15% auto; padding: 20px; width: 300px; border-radius: 5px;">
+            <span id="closeModal" style="cursor: pointer; float: right;">&times;</span>
+            <h3>Metode Pembayaran</h3>
+            <div id="paymentMethods"></div>
+            <button id="confirmPayment" style="margin-top: 15px;">Konfirmasi Pembayaran</button>
+            <div id="paymentDetails" style="margin-top: 20px;"></div> <!-- Tempat untuk detail pembayaran -->
+            <div id="invoice" style="margin-top: 20px; display:none;"></div> <!-- Tempat untuk invoice -->
+        </div>
+    </div>
 
     <footer class="section-p1">
         <div class="col">
             <img class="logo" src="Image/Logo_muzikan-removebg-preview.png" alt="">
             <h4>Contact</h4>
             <p><strong>Address: </strong> Jl. Ketintang, Ketintang, Kec. Gayungan, Kota Surabaya, Jawa Timur 60231</p>
-            <p><strong>Phone: </strong> +62 123-456-789</p>
+            <p><strong>Phone: </strong> <a href="https://wa.me/6285816969538" target="_blank">+62 858-1696-9538</a></p>
             <p><strong>Hours: </strong> 08:00 - 18:00, Mon-Fri</p>
             <div class="follow">
                 <h4>Follow us</h4>
                 <div class="icon">
                     <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-youtube"></i>
+                    <a href="https://youtu.be/xskk9WXiqtY?si=0b9bJmyOgQqz22iA" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -105,5 +120,9 @@
 
     <script src="script home.js"></script>
     <script src="cart.js"></script>
+    <script src="newsletter.js"></script>
+    <script src="payment.js"></script>
+    <script src="coupon.js"></script>
+
 </body>
 </html>
